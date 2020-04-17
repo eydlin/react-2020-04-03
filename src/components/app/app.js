@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Restaurants from '../restaurants';
+import Order from '../order';
 import { Layout } from 'antd';
 import Header from '../header';
 
@@ -9,8 +10,9 @@ class App extends Component {
     const { restaurants } = this.props;
     return (
       <div>
+        <Order restaurants={restaurants} />
         <Layout>
-          <Header>{/* <Order /> */}</Header>
+          <Header></Header>
           <Layout.Content>
             <Restaurants restaurants={restaurants} />
           </Layout.Content>
